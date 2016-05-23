@@ -1,0 +1,94 @@
+@font-face {
+    font-family: 'BEBAS NEUE Light';
+    src: local("BEBAS NEUE Light"), url("bebas/BebasNeue_Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: 'BEBAS NEUE BOLD';
+    src: local("BEBAS NEUE BOLD"), url("bebas/BebasNeue_Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: 'BEBAS NEUE';
+    src: local("BEBAS NEUE"), url("bebas/BebasNeue_Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "RobotoRegular";
+    src: url("roboto/RobotoRegular.eot");
+    src: url("roboto/RobotoRegular.eot?#iefix") format("embedded-opentype"), url("roboto/RobotoRegular.woff") format("woff"), url("roboto/RobotoRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "RobotoLight";
+    src: url("roboto/RobotoLight.eot");
+    src: url("roboto/RobotoLight.eot?#iefix") format("embedded-opentype"), url("roboto/RobotoLight.woff") format("woff"), url("roboto/RobotoLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+@font-face {
+    font-family: "RobotoMedium";
+    src: url("roboto/RobotoMedium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal
+}
+
+label {
+    display: block;
+    padding-left: 30px
+}
+
+.b-testForm__question, .g-answers__question {
+    width: 500px;
+    border-top: 1px solid black
+}
+
+.b-testForm__error {
+    padding: 4px;
+    background-color: #ff6261
+}
+
+.g-answers__question {
+    padding: 10px 0 0 20px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px
+}
+
+.g-answers__question_green {
+    background-color: #478040
+}
+
+.g-answers__question_red {
+    background-color: #ff6261
+}
+
+.ng-enter:nth-child(2) {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    opacity: 0;
+    margin-left: 100%
+}
+
+.ng-enter-active:nth-child(2) {
+    opacity: 1;
+    margin-left: 0
+}
+
+body {
+    background-color: #bcbcbc;
+    font-family: "RobotoLight", serif;
+    margin-left: 40px;
+    position: relative
+}
+
+/*# sourceMappingURL=maps/main.css.map */

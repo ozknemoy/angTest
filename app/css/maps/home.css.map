@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "file": "home.css",
+  "sources": [
+    "home.sass",
+    "_variables.sass"
+  ],
+  "sourcesContent": [
+    "@import \"variables.sass\";\n\nlabel {\n  display: block;\n  padding-left: 30px; }\n\n\n\n\n.question {\n  margin-left: 20px;\n  width: 500px;\n  border-top: 1px solid black; }\n",
+    "\n$main_color: red;\n$main_font_color: #3d3b49;\n$main_font_size: 14px;\n$font_robo: 'RobotoLight', serif;\n"
+  ],
+  "mappings": "AAEA,KAAK,AAAC,CACJ,OAAO,CAAE,KAAM,CACf,YAAY,CAAE,IAAK,CAAG,AAKxB,SAAS,AAAC,CACR,WAAW,CAAE,IAAK,CAClB,KAAK,CAAE,KAAM,CACb,UAAU,CAAE,eAAgB,CAAG",
+  "names": [],
+  "sourceRoot": "/source/"
+}

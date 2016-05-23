@@ -1,0 +1,34 @@
+﻿<h3>Вопросы</h3>
+<form name="testForm" novalidate>
+    <section class="b-testForm__question" data-ng-repeat="q in ctrl.questions">
+        <br>
+        <h4>{{$index+1}}. Сколько будет {{q.question}} ?</h4>
+
+        <section data-ng-if="q.type=='radioButton'">
+            <label data-ng-repeat="answer in q.answers">
+                <input name="{{q.checksum}}" data-ng-model="ctrl.ans[q.checksum]" value={{answer.option}} type="radio"
+                       required>{{answer.option + '. ' + answer.value}}
+            </label>
+        </section>
+
+        <section data-ng-if="q.type=='textInput'">
+            <label>
+                <input type="text" data-ng-model="ctrl.ans[q.checksum]" placeholder="введите ответ" required>
+            </label>
+        </section>
+
+        <section data-ng-if="q.type=='checkboxInput'">
+            <label data-ng-repeat="answer in q.answers">
+                <input type="checkbox" data-ng-model="ctrl.ans[q.checksum][answer.option]" ng-value={{answer.option}}
+                >{{answer.option + '. ' + answer.value}}
+            </label>
+            <input data-ng-show="r" type="text" data-ng-model="ctrl.ans[q.checksum]" required>
+        </section>
+    </section>
+
+    <input data-ng-if="testForm.$invalid" type="button" data-ng-click="ctrl.notSubmit=1" value="Отправить">
+    <input data-ng-if="!testForm.$invalid" type="button" data-ui-sref="answers" data-ng-click="ctrl.submit(ctrl.ans)"
+           value="Отправить">
+    <span class="b-testForm__error"
+          data-ng-if="ctrl.notSubmit&&testForm.$invalid">Чтобы продолжить заполните все поля</span>
+</form>

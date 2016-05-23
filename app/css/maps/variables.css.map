@@ -1,0 +1,13 @@
+{
+  "version": 3,
+  "file": "variables.css",
+  "sources": [
+    "variables.sass"
+  ],
+  "sourcesContent": [
+    "\n$main_color: red;\n$main_font_color: #3d3b49;\n$main_font_size: 14px;\n$font_robo: 'RobotoLight', serif;\n\n"
+  ],
+  "mappings": "",
+  "names": [],
+  "sourceRoot": "/source/"
+}

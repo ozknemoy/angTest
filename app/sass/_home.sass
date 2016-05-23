@@ -1,0 +1,43 @@
+@import "variables.sass"
+
+label
+  display: block
+  padding-left: 30px
+
+.b-testForm__question
+  width: 500px
+  border-top: 1px solid black
+
+.b-testForm__error
+  padding: 4px
+  background-color: #ff6261
+
+.g-answers__question
+  @extend .b-testForm__question
+  padding: 10px 0 0 20px
+  margin: 5px
+  border: 1px solid black
+  border-radius: 5px
+
+.g-answers__question_green
+  background-color: #478040
+
+.g-answers__question_red
+  background-color: #ff6261
+
+//animation
+.ng-enter:nth-child(2)
+  -webkit-transition: 0.5s
+  transition: 0.5s
+  opacity: 0
+  margin-left: 100%
+
+.ng-enter-active:nth-child(2)
+  opacity: 1
+  margin-left: 0
+
+//.ng-enter-stagger
+  transition-delay: 0.9s
+  -webkit-transition-delay: 0.9s
+  transition-duration: 2s
+  -webkit-transition-duration: 2s

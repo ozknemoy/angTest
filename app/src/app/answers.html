@@ -1,0 +1,50 @@
+﻿<section>
+    <h4>Ваши результаты</h4>
+
+    <p>Вы набрали {{ctrl.points.scores}} балла из {{ctrl.points.allScores}}.</p>
+
+    <p>Из них правильных ответов: {{ctrl.points.rightAnswers}}</p>
+
+    <p>Из них не правильных ответов: {{ctrl.points.wrongAnswers}}</p>
+</section>
+
+<section class="g-answers__question" data-ng-repeat="answer in ctrl.answers"
+         data-ng-class="{'g-answers__question_red':answer.user_answer,'g-answers__question_green':answer.user_answer_correct}">
+    <h4>{{$index+1}}. {{answer.question}} </h4>
+    <!--wrongAnswers-->
+    <section data-ng-if="answer.user_answer">
+        <!--type=='radioButton' or 'textInput'-->
+        <div data-ng-if="answer.type!=='checkboxInput'">
+            <p>Ваш ответ: "{{answer.user_answer.option + '. ' + answer.user_answer.value}}" - не правильно</p>
+
+            <p>Правильный ответ: {{ctrl.rightAnswerView(answer,answer.correct_answers)}}</p>
+        </div>
+        <!--type=='checkboxInput'-->
+        <div data-ng-if="answer.type=='checkboxInput'">
+            <p>Ваш ответ:
+                <span data-ng-repeat="subanswer in answer.user_answer.value">
+                     {{subanswer.option + '. ' + subanswer.value}}
+                </span>
+                - не правильно</p>
+
+            <p>Правильный ответ: {{ctrl.rightAnswerViewArr(answer,answer.correct_answers)}}</p>
+        </div>
+    </section>
+    <!--rightAnswers-->
+    <section data-ng-if="answer.user_answer_correct">
+        <p>Ваш правильный ответ: {{ctrl.rightAnswerViewArr(answer,answer.correct_answers)}}</p>
+    </section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+

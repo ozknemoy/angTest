@@ -1,0 +1,39 @@
+{
+  "name": "test",
+  "private": true,
+  "version": "0.0.0",
+  "description": "frontend setup, AngularJS, gulp",
+  "repository": "https://github.com",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.8.0",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.6",
+    "gulp-webserver": "^0.9.1",
+    "jasmine-core": "^2.3.4",
+    "karma": "^0.13.10",
+    "karma-chrome-launcher": "^0.2.0",
+    "karma-firefox-launcher": "^0.1.6",
+    "karma-jasmine": "^0.3.6",
+    "karma-junit-reporter": "^0.3.5"
+  },
+  "scripts": {
+    "pretest": "npm install",
+    "test": "karma start karma.conf.js",
+    "test-single-run": "karma start karma.conf.js  --single-run",
+    "preupdate-webdriver": "npm install",
+    "update-webdriver": "webdriver-manager update",
+    "preprotractor": "npm run update-webdriver",
+    "protractor": "protractor e2e-tests/protractor.conf.js"
+  },
+  "dependencies": {
+    "angular": "^1.5.5",
+    "angular-animate": "^1.5.5",
+    "angular-ui-router": "^0.2.17"
+  }
+}
